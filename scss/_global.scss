@@ -1,0 +1,106 @@
+$font-p: 1.8rem;
+$font-h1: 3.5rem;
+$font-h2: 2.4rem;
+$font-h3: 2.0rem;
+
+
+@mixin caja-flex($principal, $cruzado, $wrap) {
+    display: flex;
+    justify-content: $principal;
+    align-items: $cruzado;
+    flex-wrap: $wrap;
+}
+
+@mixin nosotros {
+    color: aliceblue;
+    line-height: 30px;
+    padding: 50px;
+    border-radius: 15px;
+    margin: 20px;
+    background-color: rgb(48, 36, 24);
+    text-align: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    line-height: 1.6;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-image: url(/assets/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 3rem;
+    width: 100%;
+    margin: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(134, 132, 132);
+}
+
+p {
+    font-size: $font-p;
+    color: black;
+}
+
+h1 {
+    margin-top: 120px !important;
+    padding-right: 20px;
+    font-size: $font-h1;
+}
+
+h2 {
+    font-size: $font-h2;
+    text-align: center;
+}
+
+h3 {
+    font-size: $font-h3;
+    font-weight: lighter;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    padding: 0.7em 1.5em;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: transform 100ms;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+}
+
+.btn-principal {
+    @extend .btn;
+    color: #fff;
+    background-color: #6495ED;
+}
+
+.btn-secundario {
+    @extend .btn;
+    background-color: rgb(134, 132, 132);
+}
